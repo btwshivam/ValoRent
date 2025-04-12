@@ -1,0 +1,77 @@
+@use "./sass" as *
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
+
+.app
+    width: 100%
+    height: 100vh
+    font-family: $font-family
+    color: $color-primary-400
+    background-color: $color-primary-100
+
+.flexCr
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+
+// Custom button variants
+.btn-accent
+    background-color: $color-accent-primary
+    border-color: $color-accent-primary
+    color: white
+    
+    &:hover, &:focus, &:active
+        background-color: darken($color-accent-primary, 10%)
+        border-color: darken($color-accent-primary, 10%)
+        color: white
+
+.btn-outline-accent
+    color: $color-accent-primary
+    border-color: $color-accent-primary
+    
+    &:hover, &:focus, &:active
+        background-color: $color-accent-primary
+        color: white
+
+// Card and component styling
+.card
+    border-radius: $border-radius
+    overflow: hidden
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+    border: none
+    
+    .card-header
+        background-color: $color-primary-200
+        color: white
+        
+    .card-footer
+        background-color: rgba(0, 0, 0, 0.02)
+
+// Form styling
+.form-control, .form-select
+    border-radius: $border-radius
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    padding: 0.5rem 0.8rem
+    
+    &:focus
+        box-shadow: 0 0 0 3px rgba($color-primary-200, 0.2)
+        border-color: $color-primary-200
+
+// Badge styling
+.badge
+    font-weight: $fs-light
+    padding: 0.4rem 0.7rem
+    border-radius: 50rem
+
+// Loader styling
+.loader-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(255, 255, 255, 0.8)
+    z-index: 1000

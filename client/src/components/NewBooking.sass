@@ -1,0 +1,92 @@
+@use "../sass" as *
+
+.booking-modal
+    .modal-dialog
+        max-width: 700px
+        
+    .modal-content
+        border-radius: $border-radius
+        border: none
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+        
+    .modal-header
+        background-color: $color-primary-200
+        color: white
+        border-bottom: none
+        padding: 1rem 1.5rem
+        
+        .modal-title
+            font-weight: $fs-dark
+            
+        .btn-close
+            filter: brightness(0) invert(1)
+            opacity: 0.8
+            
+            &:hover
+                opacity: 1
+        
+    .car-image-container
+        width: 100%
+        height: 150px
+        border-radius: $border-radius
+        overflow: hidden
+        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            
+    .car-title
+        color: $color-primary-400
+        font-weight: $fs-dark
+        margin-bottom: 1rem
+        
+    .car-details
+        .car-detail-item
+            display: flex
+            justify-content: space-between
+            margin-bottom: 0.5rem
+            
+            .detail-label
+                color: $color-primary-400
+                font-weight: $fs-default
+                
+            .detail-value
+                font-weight: $fs-dark
+                
+                &.price
+                    color: $color-accent-primary
+                    font-size: 1.1rem
+    
+    .booking-form
+        .form-control, .form-select
+            border-radius: $border-radius
+            border: 1px solid rgba(0, 0, 0, 0.1)
+            
+            &:focus
+                box-shadow: 0 0 0 3px rgba($color-primary-200, 0.2)
+                border-color: $color-primary-200
+                
+    .summary-card
+        .card-header
+            background-color: $color-primary-200
+            color: white
+            
+        .summary-item
+            display: flex
+            justify-content: space-between
+            padding: 0.7rem 0
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+            
+            &:last-child
+                border-bottom: none
+                
+            &.total
+                font-weight: $fs-dark
+                font-size: 1.1rem
+                color: $color-accent-primary
+                margin-top: 0.5rem
+                padding-top: 1rem
+                border-top: 2px solid rgba(0, 0, 0, 0.1)
+                border-bottom: none
+
