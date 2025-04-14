@@ -2,7 +2,6 @@
 
 VeloRent is a modern, full-featured car rental system built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This application provides a seamless experience for users to browse, search, and book rental cars.
 
-![VeloRent Screenshot](https://via.placeholder.com/800x400?text=VeloRent+Screenshot)
 
 ## Features
 
@@ -91,7 +90,7 @@ server/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/btwshivam/ValoRent.git
+   git clone https://github.com/btwshivam/VeloRent.git
    cd VeloRent
    ```
 
@@ -175,11 +174,3 @@ The Node.js backend can be deployed to services like Heroku, AWS Elastic Beansta
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgements
-
-- [React Bootstrap](https://react-bootstrap.github.io/)
-- [Create React App](https://create-react-app.dev/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Node.js](https://nodejs.org/)
-- [Unsplash](https://unsplash.com/) for images 
