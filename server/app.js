@@ -28,7 +28,7 @@ mongoose.connect(ENV.MONGODB_URL, { dbName: ENV.DB_NAME }).then(() => {
     app.listen(ENV.PORT, () => console.log(`Server is up at ${ENV.PORT}`));
 
     // FIRST TIME IMPORTING CARS
-    firstTimeSetup();
+   // firstTimeSetup();
 });
 
 const firstTimeSetup = () => {

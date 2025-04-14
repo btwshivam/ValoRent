@@ -65,7 +65,7 @@ const register = async (req, res) => {
         const htmlData = await renderFile(path, {
             name,
             urlPath,
-            msg: "You're almost there to start enjoying DriveEase. Simply click the link below to verify your email address and get started.",
+            msg: "You're almost there to start enjoying VeloRent. Simply click the link below to verify your email address and get started.",
         });
         sendEmail(email, "Verify Email Address", htmlData);
         res.status(200).send({ message: "We have sent an email that contains link to complete your registration.", next: "register" });
