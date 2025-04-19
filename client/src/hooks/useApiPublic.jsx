@@ -75,9 +75,9 @@ export default function useApiPublic() {
         }
     };
 
-    const register = async (name, email) => {
+    const register = async (name, email, password, phone, address) => {
         try {
-            const res = await apiManager.post("/auth/register", { name, email });
+            const res = await apiManager.post("/auth/register", { name, email, password, phone, address });
             const data = res.data;
             return data;
         } catch (err) {
