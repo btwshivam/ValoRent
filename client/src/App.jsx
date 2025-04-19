@@ -16,7 +16,7 @@ export default function App() {
             setBackendUp(isBackendUp);
         };
         checkBackendStatus();
-    }, []);
+    }, [healthCheck]);
 
     return backendUp ? (
         <main className="app">

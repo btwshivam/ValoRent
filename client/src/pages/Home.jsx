@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button, ButtonGroup, FloatingLabel, Form, Image, Navbar, Container, Card, Badge } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { UserPlaceholder, LogoSVG } from "../assets";
+import { UserPlaceholder } from "../assets";
 import { Bookings, NewBooking, UserProfile } from "../components";
 import { useApiPrivate, useSessionStorage } from "../hooks";
 import "./Home.sass";

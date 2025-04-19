@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { VeloRentLogo } from "../../assets";
 import "./Auth.sass";
 import Login from "./Login";
 import Register from "./Register";
