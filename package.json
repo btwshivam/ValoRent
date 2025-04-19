@@ -1,13 +1,26 @@
 {
-    "name": "drive-ease",
+    "name": "velorent",
     "version": "1.0.0",
-    "license": "MIT",
+    "description": "Car rental application",
+    "main": "index.js",
     "scripts": {
-        "start-frontend": "cd client && yarn start",
-        "start-backend": "cd server& yarn dev",
-        "serve": "concurrently -n \"C,S\" -c \"bgBlue,bgMagenta\" -p \"[{name}]\" \"yarn start-frontend\" \"yarn start-backend\""
+        "install-client": "cd client && npm install",
+        "install-server": "cd server && npm install",
+        "install": "npm run install-client && npm run install-server",
+        "client-build": "cd client && npm run build",
+        "server-build": "cd server && npm run build",
+        "build": "npm run client-build && npm run server-build",
+        "start-client": "cd client && npm start",
+        "start-server": "cd server && npm start",
+        "dev": "concurrently \"npm run start-server\" \"npm run start-client\""
     },
-    "dependencies": {
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "keywords": ["mern", "bike-rental", "react", "node", "mongodb"],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
         "concurrently": "^8.2.2"
     }
 }

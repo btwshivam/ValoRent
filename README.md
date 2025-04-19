@@ -169,6 +169,84 @@ npm run build
 ### Backend Deployment
 The Node.js backend can be deployed to services like Heroku, AWS Elastic Beanstalk, or DigitalOcean.
 
+### Option 1: Deploy to Render
+
+1. **Create two services on Render:**
+   - Web Service for the backend (server)
+   - Static Site for the frontend (client)
+
+2. **For the backend service:**
+   - Use the repository URL
+   - Build Command: `cd server && npm install`
+   - Start Command: `cd server && npm start`
+   - Add all environment variables from `.env`
+
+3. **For the frontend service:**
+   - Use the repository URL
+   - Build Command: `cd client && npm install && npm run build`
+   - Publish directory: `client/build`
+   - Add Environment Variable: `REACT_APP_SERVER_BASE_URL=https://your-backend-url.render.com/`
+
+### Option 2: Deploy to Heroku
+
+1. **Create a Heroku app:**
+   ```bash
+   heroku create velorent-app
+   ```
+
+2. **Add environment variables:**
+   ```bash
+   heroku config:set NODE_ENV=production
+   # Add all other environment variables from .env
+   ```
+
+3. **Deploy the application:**
+   ```bash
+   git push heroku main
+   ```
+
+### Option 3: Manual Deployment
+
+1. **Build the client:**
+   ```bash
+   cd client
+   npm install
+   npm run build
+   ```
+
+2. **Set up the server:**
+   ```bash
+   cd server
+   npm install
+   ```
+
+3. **Start the server in production mode:**
+   ```bash
+   NODE_ENV=production npm start
+   ```
+
+## Environment Variables
+
+### Server (.env)
+```
+ACCESS_TOKEN=<your_jwt_access_token_secret>
+CLIENT_URL=<your_frontend_url>
+MAIL_EMAIL=<your_email_for_sending_notifications>
+MAIL_PASS=<your_email_password_or_app_password>
+MONGODB_URL=<your_mongodb_connection_string>
+PASSWORD_SALT=10
+PORT=7000
+REFRESH_TOKEN=<your_jwt_refresh_token_secret>
+STRIPE_KEY=<your_stripe_api_key>
+VERIFICATION_TOKEN=<your_jwt_verification_token_secret>
+VERIFICATION_URL=/authenticate/verifyEmail
+PAYMENT_CONF_URL=/payments
+```
+
+### Client (.env.production)
+```
+REACT_APP_SERVER_BASE_URL=<your_backend_url>
+```
 
 ## License
 

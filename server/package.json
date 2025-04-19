@@ -4,8 +4,9 @@
     "type": "module",
     "main": "app.js",
     "scripts": {
-        "start" : "node app.js",
-        "dev": "nodemon app.js"
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "build": "echo 'Server build complete'"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
